@@ -33,3 +33,11 @@ $form-bg: var(--dse-form-bg, $white) !default;
 $form-error-color: var(--dse-form-error-color, $red) !default;
 $form-error-border: var(--dse-form-error-border, $red) !default;
 $form-border-focus-color: var(--dse-form-border-focus-color, $green) !default;
+/*=============================================
+=                 input                       =
+=============================================*/
+$input-border-color: var(--dse-input-border-color, $dark-light) !default;
+$input-bg-color: var(--dse-input-bg-color, $white-dark) !default;
+$input-color-option-selected: var(--dse-input-color-option-selected, $blue) !default;
+$input-bg-color-hover: var(--dse-input-bg-color-hover, $gray) !default;
+$input-error-border: var(--dse-input-error-border, $red) !default;

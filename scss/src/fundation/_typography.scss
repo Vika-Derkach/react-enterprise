@@ -40,3 +40,14 @@ $h-3-font-weight: var(--dse-h3-text-weight, $fw-bold) !default;
 $h-4-font-weight: var(--dse-h4-text-weight, $fw-medium) !default;
 $h-5-font-weight: var(--dse-h5-text-weight, $fw-normal) !default;
 $h-6-font-weight: var(--dse-h6-text-weight, $fw-light) !default;
+
+/*=============================================
+=            Head font size                =
+=============================================*/
+
+$h-1-font-size: var(--dse-h1-text-size, $fw-black) !default;
+$h-2-font-size: var(--dse-h2-text-size, $fw-semibold) !default;
+$h-3-font-size: var(--dse-h3-text-size, $fw-bold) !default;
+$h-4-font-size: var(--dse-h4-text-size, $fw-medium) !default;
+$h-5-font-size: var(--dse-h5-text-size, $fw-normal) !default;
+$h-6-font-size: var(--dse-h6-text-size, $fw-light) !default;
