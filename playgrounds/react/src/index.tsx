@@ -1,4 +1,4 @@
-import { Color } from "@ds.e/react";
+import { Color, Image } from "@ds.e/react";
 import "@ds.e/scss/lib/Utilities.css";
 // import "@ds.e/scss/lib/Button.css";
 import React from "react";
@@ -27,6 +27,7 @@ ReactDOM.render(
   <div>
     {" "}
     <Color hexCode="#000" />
+    <Image width="lg" height="lg" />
   </div>,
   document.querySelector("#root")
 );

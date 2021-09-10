@@ -2267,6 +2267,38 @@ const Color = ({
 };
 
 exports.default = Color;
+},{"react":"../../../node_modules/react/index.js","../../foundation/Spacing.js":"../../../node_modules/@ds.e/react/lib/foundation/Spacing.js"}],"../../../node_modules/@ds.e/react/lib/atoms/Image/Image.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _Spacing = _interopRequireDefault(require("../../foundation/Spacing.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// import { Spacing } from "@ds.e/foundation";
+const Image = ({
+  hexCode,
+  width = _Spacing.default.sm,
+  height = _Spacing.default.sm
+}) => {
+  const className = `dse-width-${width} dse-height-${height}`;
+  return _react.default.createElement("div", null, " ", _react.default.createElement("img", {
+    className: className,
+    style: {
+      backgroundColor: hexCode
+    },
+    src: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/200px-Cat03.jpg",
+    alt: ""
+  }));
+};
+
+exports.default = Image;
 },{"react":"../../../node_modules/react/index.js","../../foundation/Spacing.js":"../../../node_modules/@ds.e/react/lib/foundation/Spacing.js"}],"../../../node_modules/@ds.e/react/lib/index.js":[function(require,module,exports) {
 "use strict";
 
@@ -2279,6 +2311,12 @@ Object.defineProperty(exports, "Color", {
     return _Color.default;
   }
 });
+Object.defineProperty(exports, "Image", {
+  enumerable: true,
+  get: function () {
+    return _Image.default;
+  }
+});
 Object.defineProperty(exports, "Spacing", {
   enumerable: true,
   get: function () {
@@ -2288,10 +2326,12 @@ Object.defineProperty(exports, "Spacing", {
 
 var _Color = _interopRequireDefault(require("./atoms/Color/Color.js"));
 
+var _Image = _interopRequireDefault(require("./atoms/Image/Image.js"));
+
 var _Spacing = _interopRequireDefault(require("./foundation/Spacing.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./atoms/Color/Color.js":"../../../node_modules/@ds.e/react/lib/atoms/Color/Color.js","./foundation/Spacing.js":"../../../node_modules/@ds.e/react/lib/foundation/Spacing.js"}],"../../../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"./atoms/Color/Color.js":"../../../node_modules/@ds.e/react/lib/atoms/Color/Color.js","./atoms/Image/Image.js":"../../../node_modules/@ds.e/react/lib/atoms/Image/Image.js","./foundation/Spacing.js":"../../../node_modules/@ds.e/react/lib/foundation/Spacing.js"}],"../../../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -28472,6 +28512,9 @@ var options = [{
 
 _reactDom.default.render(_react2.default.createElement("div", null, " ", _react2.default.createElement(_react.Color, {
   hexCode: "#000"
+}), _react2.default.createElement(_react.Image, {
+  width: "lg",
+  height: "lg"
 })), document.querySelector("#root"));
 },{"@ds.e/react":"../../../node_modules/@ds.e/react/lib/index.js","@ds.e/scss/lib/Utilities.css":"../../../node_modules/@ds.e/scss/lib/Utilities.css","react":"../../../node_modules/react/index.js","react-dom":"../../../node_modules/react-dom/index.js"}],"../../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -28501,7 +28544,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52647" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56786" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
