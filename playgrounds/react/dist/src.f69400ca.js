@@ -2342,7 +2342,55 @@ const Image = ({
 };
 
 exports.default = Image;
-},{"@ds.e/foundation":"../../../node_modules/@ds.e/foundation/lib/index.js","react":"../../../node_modules/react/index.js"}],"../../../node_modules/@ds.e/react/lib/atoms/Text/Text.js":[function(require,module,exports) {
+},{"@ds.e/foundation":"../../../node_modules/@ds.e/foundation/lib/index.js","react":"../../../node_modules/react/index.js"}],"../../../node_modules/@ds.e/react/lib/atoms/Margin/Margin.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const Margin = ({
+  space = "xxxs",
+  children,
+  left,
+  right,
+  top,
+  bottom
+}) => {
+  let className = ``;
+
+  if (!left && !right && !top && !bottom) {
+    className = `dse-margin-${space}`;
+  }
+
+  if (left) {
+    className = `${className} dse-margin-left-${space}`;
+  }
+
+  if (right) {
+    className = `${className} dse-margin-right-${space}`;
+  }
+
+  if (top) {
+    className = `${className} dse-margin-top-${space}`;
+  }
+
+  if (bottom) {
+    className = `${className} dse-margin-bottom-${space}`;
+  }
+
+  return _react.default.createElement("div", {
+    className: className
+  }, children);
+};
+
+exports.default = Margin;
+},{"react":"../../../node_modules/react/index.js"}],"../../../node_modules/@ds.e/react/lib/atoms/Text/Text.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2385,6 +2433,12 @@ Object.defineProperty(exports, "Image", {
     return _Image.default;
   }
 });
+Object.defineProperty(exports, "Margin", {
+  enumerable: true,
+  get: function () {
+    return _Margin.default;
+  }
+});
 Object.defineProperty(exports, "Text", {
   enumerable: true,
   get: function () {
@@ -2396,10 +2450,12 @@ var _Color = _interopRequireDefault(require("./atoms/Color/Color.js"));
 
 var _Image = _interopRequireDefault(require("./atoms/Image/Image.js"));
 
+var _Margin = _interopRequireDefault(require("./atoms/Margin/Margin.js"));
+
 var _Text = _interopRequireDefault(require("./atoms/Text/Text.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./atoms/Color/Color.js":"../../../node_modules/@ds.e/react/lib/atoms/Color/Color.js","./atoms/Image/Image.js":"../../../node_modules/@ds.e/react/lib/atoms/Image/Image.js","./atoms/Text/Text.js":"../../../node_modules/@ds.e/react/lib/atoms/Text/Text.js"}],"../../../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"./atoms/Color/Color.js":"../../../node_modules/@ds.e/react/lib/atoms/Color/Color.js","./atoms/Image/Image.js":"../../../node_modules/@ds.e/react/lib/atoms/Image/Image.js","./atoms/Margin/Margin.js":"../../../node_modules/@ds.e/react/lib/atoms/Margin/Margin.js","./atoms/Text/Text.js":"../../../node_modules/@ds.e/react/lib/atoms/Text/Text.js"}],"../../../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -2466,7 +2522,13 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../../../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../../../node_modules/@ds.e/scss/lib/Text.css":[function(require,module,exports) {
+},{"./bundle-url":"../../../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../../../node_modules/@ds.e/scss/lib/Margin.css":[function(require,module,exports) {
+
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+},{"_css_loader":"../../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../node_modules/@ds.e/scss/lib/Text.css":[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
@@ -28560,6 +28622,8 @@ if ("development" === 'production') {
 
 var _react = require("@ds.e/react");
 
+require("@ds.e/scss/lib/Margin.css");
+
 require("@ds.e/scss/lib/Text.css");
 
 require("@ds.e/scss/lib/Utilities.css");
@@ -28571,7 +28635,6 @@ var _reactDom = _interopRequireDefault(require("react-dom"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // import "@ds.e/scss/lib/Button.css";
-// import '@ds.e/scss/lib/Margin.css'
 // import '@ds.e/scss/lib/Select.css'
 // import '@ds.e/scss/lib/global.css'
 var options = [{
@@ -28590,10 +28653,13 @@ _reactDom.default.render(_react2.default.createElement("div", null, " ", _react2
 }), _react2.default.createElement(_react.Image, {
   width: "lg",
   height: "lg"
-}), _react2.default.createElement(_react.Text, {
+}), _react2.default.createElement(_react.Margin, {
+  left: true,
+  space: "lg"
+}, _react2.default.createElement(_react.Text, {
   size: "lg"
-}, " gfdfgxdg")), document.querySelector("#root"));
-},{"@ds.e/react":"../../../node_modules/@ds.e/react/lib/index.js","@ds.e/scss/lib/Text.css":"../../../node_modules/@ds.e/scss/lib/Text.css","@ds.e/scss/lib/Utilities.css":"../../../node_modules/@ds.e/scss/lib/Utilities.css","react":"../../../node_modules/react/index.js","react-dom":"../../../node_modules/react-dom/index.js"}],"../../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+}, " gfdfgxdg"))), document.querySelector("#root"));
+},{"@ds.e/react":"../../../node_modules/@ds.e/react/lib/index.js","@ds.e/scss/lib/Margin.css":"../../../node_modules/@ds.e/scss/lib/Margin.css","@ds.e/scss/lib/Text.css":"../../../node_modules/@ds.e/scss/lib/Text.css","@ds.e/scss/lib/Utilities.css":"../../../node_modules/@ds.e/scss/lib/Utilities.css","react":"../../../node_modules/react/index.js","react-dom":"../../../node_modules/react-dom/index.js"}],"../../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -28621,7 +28687,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50037" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55356" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
