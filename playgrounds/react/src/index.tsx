@@ -1,8 +1,8 @@
-import { Button } from "@ds.e/react";
-import "@ds.e/scss/lib/Button.css";
+import { Color } from "@ds.e/react";
+import "@ds.e/scss/lib/Utilities.css";
+// import "@ds.e/scss/lib/Button.css";
 import React from "react";
 import ReactDOM from "react-dom";
-// import '@ds.e/scss/lib/Utilities.css'
 // import '@ds.e/scss/lib/Text.css'
 // import '@ds.e/scss/lib/Margin.css'
 // import '@ds.e/scss/lib/Select.css'
@@ -25,7 +25,8 @@ const options = [
 
 ReactDOM.render(
   <div>
-    <Button label="Example Button" />
+    {" "}
+    <Color hexCode="#000" />
   </div>,
   document.querySelector("#root")
 );
