@@ -1,6 +1,6 @@
 // import { Spacing } from "@ds.e/foundation";
+import { Spacing } from "@ds.e/foundation";
 import React from "react";
-import Spacing from "../../foundation/Spacing";
 interface ImageProps {
   hexCode?: string;
   width?: keyof typeof Spacing;

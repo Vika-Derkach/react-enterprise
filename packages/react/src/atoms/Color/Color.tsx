@@ -1,12 +1,10 @@
-// import { Spacing } from "@ds.e/foundation";
+import { Spacing } from "@ds.e/foundation";
 import React from "react";
-import Spacing from "../../foundation/Spacing";
+
 interface ColorProps {
   hexCode: string;
   width?: keyof typeof Spacing;
   height?: keyof typeof Spacing;
-  // width: string;
-  // height: string;
 }
 
 const Color: React.FC<ColorProps> = ({
