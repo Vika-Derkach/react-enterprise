@@ -2742,7 +2742,19 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../../../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../../../node_modules/@ds.e/scss/lib/Margin.css":[function(require,module,exports) {
+},{"./bundle-url":"../../../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../../../node_modules/@ds.e/scss/lib/global.css":[function(require,module,exports) {
+
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+},{"_css_loader":"../../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../node_modules/@ds.e/scss/lib/Margin.css":[function(require,module,exports) {
+
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+},{"_css_loader":"../../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../node_modules/@ds.e/scss/lib/Select.css":[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
@@ -28842,7 +28854,11 @@ if ("development" === 'production') {
 
 var _react = require("@ds.e/react");
 
+require("@ds.e/scss/lib/global.css");
+
 require("@ds.e/scss/lib/Margin.css");
+
+require("@ds.e/scss/lib/Select.css");
 
 require("@ds.e/scss/lib/Text.css");
 
@@ -28855,8 +28871,6 @@ var _reactDom = _interopRequireDefault(require("react-dom"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // import "@ds.e/scss/lib/Button.css";
-//import '@ds.e/scss/lib/Select.css'
-// import '@ds.e/scss/lib/global.css'
 var options = [{
   label: "Strict Black",
   value: "strict-black"
@@ -28868,7 +28882,11 @@ var options = [{
   value: "pink"
 }];
 
-_reactDom.default.render(_react2.default.createElement("div", null, " ", _react2.default.createElement(_react.Select, {
+_reactDom.default.render(_react2.default.createElement("div", {
+  style: {
+    padding: "40px"
+  }
+}, " ", _react2.default.createElement(_react.Select, {
   options: options
 }), _react2.default.createElement(_react.Color, {
   hexCode: "#000"
@@ -28881,7 +28899,7 @@ _reactDom.default.render(_react2.default.createElement("div", null, " ", _react2
 }, _react2.default.createElement(_react.Text, {
   size: "xl"
 }, " gfdfgxdg"))), document.querySelector("#root"));
-},{"@ds.e/react":"../../../node_modules/@ds.e/react/lib/index.js","@ds.e/scss/lib/Margin.css":"../../../node_modules/@ds.e/scss/lib/Margin.css","@ds.e/scss/lib/Text.css":"../../../node_modules/@ds.e/scss/lib/Text.css","@ds.e/scss/lib/Utilities.css":"../../../node_modules/@ds.e/scss/lib/Utilities.css","react":"../../../node_modules/react/index.js","react-dom":"../../../node_modules/react-dom/index.js"}],"../../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"@ds.e/react":"../../../node_modules/@ds.e/react/lib/index.js","@ds.e/scss/lib/global.css":"../../../node_modules/@ds.e/scss/lib/global.css","@ds.e/scss/lib/Margin.css":"../../../node_modules/@ds.e/scss/lib/Margin.css","@ds.e/scss/lib/Select.css":"../../../node_modules/@ds.e/scss/lib/Select.css","@ds.e/scss/lib/Text.css":"../../../node_modules/@ds.e/scss/lib/Text.css","@ds.e/scss/lib/Utilities.css":"../../../node_modules/@ds.e/scss/lib/Utilities.css","react":"../../../node_modules/react/index.js","react-dom":"../../../node_modules/react-dom/index.js"}],"../../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -28909,7 +28927,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62401" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59667" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
