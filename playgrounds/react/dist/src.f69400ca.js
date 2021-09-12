@@ -28887,7 +28887,12 @@ _reactDom.default.render(_react2.default.createElement("div", {
     padding: "40px"
   }
 }, " ", _react2.default.createElement(_react.Select, {
-  options: options
+  options: options,
+  renderOption: function renderOption(_ref) {
+    var option = _ref.option,
+        getOptionRecommendedProps = _ref.getOptionRecommendedProps;
+    return _react2.default.createElement("p", Object.assign({}, getOptionRecommendedProps()), option.label, " ");
+  }
 }), _react2.default.createElement(_react.Color, {
   hexCode: "#000"
 }), _react2.default.createElement(_react.Image, {
@@ -28927,7 +28932,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59667" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59076" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

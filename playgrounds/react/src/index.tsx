@@ -26,7 +26,12 @@ const options = [
 ReactDOM.render(
   <div style={{ padding: "40px" }}>
     {" "}
-    <Select options={options} />
+    <Select
+      options={options}
+      renderOption={({ option, getOptionRecommendedProps }) => (
+        <p {...getOptionRecommendedProps()}>{option.label} </p>
+      )}
+    />
     <Color hexCode="#000" />
     <Image width="lg" height="lg" />
     <Margin left space="lg">
