@@ -1,0 +1,6 @@
+52 error Error: Command failed: git tag v0.0.1 -m v0.0.1
+52 error fatal: tag 'v0.0.1' already exists
+52 error
+52 error     at makeError (C:\Users\v.derkach\Desktop\hunter\ds.e\node_modules\execa\index.js:174:9)
+52 error     at C:\Users\v.derkach\Desktop\hunter\ds.e\node_modules\execa\index.js:278:16
+52 error     at processTicksAndRejections (internal/process/task_queues.js:95:5)
