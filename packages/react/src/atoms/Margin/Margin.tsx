@@ -1,7 +1,7 @@
 import { Spacing } from "@ds.e/foundation";
 import React from "react";
 
-interface MarginProps {
+export interface MarginProps {
   space?: keyof typeof Spacing;
   left?: boolean;
   right?: boolean;
